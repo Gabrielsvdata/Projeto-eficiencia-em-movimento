@@ -1,0 +1,38 @@
+
+`.gitignore` 
+
+```gitignore
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.tmp
+*.temp
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Saídas pesadas (deixar só o final que você quer publicar)
+audio/*.wav
+audio/*.m4a
+audio/*_tmp.*
+video/temp-*.*
+video/*.mov
+
+# MoviePy temporários
+*.mkv
+*.x264.log
+*.mp3~  # backups
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
