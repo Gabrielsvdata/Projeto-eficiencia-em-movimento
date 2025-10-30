@@ -1,6 +1,6 @@
 # 🎧 Podcast — Eficiência em Movimento
 
-Assista online (GitHub Pages): **[▶️ Abrir o player](https://SEU_USUARIO.github.io/SEU_REPO/)**
+Assista online (GitHub Pages): **[▶️ Abrir o player](https://gabrielsvdata.github.io/Projeto-eficiencia-em-movimento/)**
 
 > Se o link acima ainda não funcionar, aguarde a publicação do GitHub Pages (geralmente alguns minutos após o push) e recarregue.
 
