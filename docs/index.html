@@ -1,6 +1,118 @@
 <!doctype html>
 <html lang="pt-BR">
+<head><!doctype html>
+<html lang="pt-BR">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Podcast — Eficiência em Movimento</title>
+
+  <!-- SEO / Social -->
+  <meta name="description" content="Podcast Eficiência em Movimento — logística de equipamentos eletrônicos com foco em armazenamento e operação." />
+  <meta property="og:title" content="Podcast — Eficiência em Movimento" />
+  <meta property="og:description" content="Ouça direto no navegador (GitHub Pages)." />
+  <meta property="og:type" content="video.other" />
+  <meta property="og:image" content="../assets/capa_podcast.png" />
+
+  <style>
+    :root{
+      /* Paleta inspirada na capa: roxos/azuis */
+      --bg:#0b0b0f;
+      --card:#11131a;
+      --border:#1e2130;
+      --text:#e7e9ee;
+      --muted:#9aa3b2;
+      --brand-1:#8b5cf6; /* violeta */
+      --brand-2:#38bdf8; /* azul-ciano */
+      --accent: linear-gradient(135deg,var(--brand-1),var(--brand-2));
+      --radius:16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:radial-gradient(1200px 800px at 10% 0%, #0e1020 0%, var(--bg) 45%), var(--bg);
+      color:var(--text); font: 16px/1.5 system-ui, Segoe UI, Roboto, Ubuntu, Arial, sans-serif;
+      display:flex; align-items:center; justify-content:center; padding:24px;
+    }
+    .container{width:min(100%, 980px)}
+    header{margin:0 0 18px}
+    .kicker{
+      display:inline-flex; align-items:center; gap:8px; font-weight:600; color:white;
+      padding:6px 10px; border-radius:999px; background:var(--accent); box-shadow:var(--shadow); font-size:.9rem;
+    }
+    h1{
+      margin:.8rem 0 0; font-size:clamp(1.4rem, 1rem + 2vw, 2.2rem);
+      letter-spacing:.2px;
+    }
+    main article{
+      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00)), var(--card);
+      border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); padding:18px;
+    }
+    p{margin:.6rem 0 1rem; color:var(--muted)}
+    .player{
+      border-radius:12px; overflow:hidden; background:#000; border:1px solid #202437;
+    }
+    video{display:block; width:100%; height:auto; background:#000; outline:none}
+    .row{
+      display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:.6rem; color:var(--muted); font-size:.95rem;
+    }
+    .row a{color:#9ecbff; text-decoration:none}
+    .row a:hover{text-decoration:underline}
+    .badge{
+      display:inline-flex; align-items:center; gap:8px; padding:8px 10px; border-radius:12px;
+      background:#0f1322; border:1px solid #1e2336;
+    }
+    .download{
+      display:inline-flex; align-items:center; gap:10px; margin:.5rem 0 0;
+      padding:10px 14px; background:var(--accent); color:#0b0b0f; border:none; border-radius:12px;
+      font-weight:700; box-shadow:var(--shadow); text-decoration:none;
+    }
+    footer{margin-top:18px; color:var(--muted); font-size:.9rem}
+    .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="kicker" aria-hidden="true">🎧 Podcast</span>
+      <h1>Eficiência em Movimento</h1>
+    </header>
+
+    <main>
+      <article aria-label="Reprodutor do episódio">
+        <p>Play direto no navegador. Se preferir, você pode <a class="download" href="../video/episodio_01.mp4" download>⬇️ Baixar o MP4</a></p>
+
+        <!-- Player com duas fontes: caminho relativo e fallback RAW (funciona em LFS) -->
+        <div class="player" role="region" aria-label="Player de vídeo">
+          <video controls preload="metadata" poster="../assets/capa_podcast.png" crossorigin="anonymous">
+            <!-- 1) arquivo no repositório -->
+            <source src="../video/episodio_01.mp4" type="video/mp4" />
+            <!-- 2) fallback RAW (ajustado para seu repositório) -->
+            <source src="https://raw.githubusercontent.com/gabrielsvdata/Projeto-eficiencia-em-movimento/main/video/episodio_01.mp4" type="video/mp4" />
+            Seu navegador não suportou o player. <a href="../video/episodio_01.mp4">Baixe o MP4</a>.
+          </video>
+        </div>
+
+        <div class="row" aria-label="metadados">
+          <span class="badge">🖼️ Capa: <code>assets/capa_podcast.png</code></span>
+          <span class="badge">🎵 Áudio: <code>audio/episodio_01_mixado.mp3</code></span>
+          <span class="badge">📦 <a href="https://github.com/gabrielsvdata/Projeto-eficiencia-em-movimento" rel="noopener">Repositório</a></span>
+        </div>
+      </article>
+
+      <footer>
+        Dica: se o vídeo ficar pesado, reexporte com bitrate menor (ex.: <code>2000k</code>) para manter o arquivo &lt; 100 MB.
+      </footer>
+    </main>
+  </div>
+
+  <noscript>
+    <p class="sr-only">Ative o JavaScript para a melhor experiência.</p>
+  </noscript>
+</body>
+</html>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Podcast – Eficiência em Movimento</title>
